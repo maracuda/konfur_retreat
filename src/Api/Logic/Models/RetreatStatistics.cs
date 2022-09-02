@@ -7,7 +7,7 @@ public class RetreatStatistics
     public string PlayerTwoName { get; set; }
     public DateTime StartDateTime { get; set; }
     public DateTime EndDateTime { get; set; }
-    public long MouseDistance { get; set; }
-    public long ClicksCount { get; set; }
-    public long ShortCutsCount { get; set; }
+    public int MouseDistance { get; set; }
+    public int ClicksCount { get; set; }
+    public int ShortCutsCount { get; set; }
 }

@@ -13,7 +13,7 @@ public class ContractsGeneratorRunner
     {
         var typeScriptCodeGenerator = new ContractsGeneratorFactory().Create();
 
-        var targetPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "src", "front",
+        var targetPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "..", "front",
             "contracts");
         
         typeScriptCodeGenerator.GenerateFiles(targetPath, JavaScriptTypeChecker.TypeScript);
