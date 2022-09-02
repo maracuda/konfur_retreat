@@ -1,3 +1,4 @@
+using Api.ContractsGeneration;
 using Api.Logic;
 using Api.Logic.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,7 @@ namespace Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[GenerateContracts]
 public class RetreatStatisticsController : ControllerBase
 {
     private readonly IRetreatStatisticsRepository _retreatStatisticsRepository;
