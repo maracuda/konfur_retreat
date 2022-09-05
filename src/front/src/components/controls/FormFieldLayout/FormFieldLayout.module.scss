@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-items: flex-start;
+}
+
+.label {
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: left;
+  width: 200px;
+}
+
+.control {
+  width: 100%;
+  flex: 1;
+}

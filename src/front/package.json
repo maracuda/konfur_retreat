@@ -1,0 +1,58 @@
+{
+  "name": "@skbkontur/front-template-rangers",
+  "version": "1.0.0",
+  "description": "template for frontend projects born in power rangers!",
+  "repository": {
+    "type": "git",
+    "url": "git@git.skbkontur.ru:rangers/front-template-rangers.git"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.kontur.host/repository/kontur-npm/"
+  },
+  "keywords": [
+    "frontend",
+    "react",
+    "template"
+  ],
+  "author": "Nadya Ageeva",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@skbkontur/react-icons": "4.5.0",
+    "@skbkontur/react-ui": "3.9.4",
+    "axios": "0.24.0",
+    "classnames": "2.3.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-error-boundary": "3.1.4",
+    "react-router-dom": "6.2.1"
+  },
+  "devDependencies": {
+    "@skbkontur/eslint-config-rangers": "^1.0.2",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@vitejs/plugin-react": "1.1.4",
+    "@vitejs/plugin-react-refresh": "1.3.6",
+    "eslint": "^8.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "sass": "1.47.0",
+    "typescript": "4.4.4",
+    "vite": "2.7.10"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie 11",
+    "not op_mini all",
+    "not baidu 7",
+    "not and_qq 10"
+  ]
+}
