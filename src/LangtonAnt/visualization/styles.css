@@ -1,0 +1,66 @@
+body {
+    color: lightgrey;
+    background-color: rgb(20,20,20);
+    text-align: center;
+    font: 1em roboto, sans-serif;
+}
+
+button {
+    background-color: rgb(200,200,200);
+    border-radius: 0.5em;
+    border: none;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: rgb(220,220,220);
+    cursor: pointer;
+}
+
+#buttons {
+    visibility: hidden;
+}
+
+#pausebutton {
+    background-color: rgb(80, 187, 114);
+}
+
+z {
+    background-color: rgb(200,200,200);
+    border-radius: 0.3em;
+    color: black;
+    font-size: 0.7em;
+    padding: 0.1em 0.3em 0.1em 0.3em;
+
+}
+
+z:hover {
+    background-color: rgb(200,200,200);
+    cursor: pointer;
+}
+
+a {
+    color: #EAF280;
+}
+
+#speed {
+    margin-left: 3em;
+    margin-right: 1em;
+}
+
+#counter {
+    margin-left: 2em;
+}
+
+#upload-data {
+    margin: 10px;
+    visibility: hidden;
+}
+
+.w3-col {
+    width: 53em;
+}
+
+.w3-rest {
+    min-width: 17em;
+}

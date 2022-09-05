@@ -1,0 +1,62 @@
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>Муравей Лэнгтона</title>
+        <meta charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="./styles.css">
+        <script src="scripts/antwalk.js"></script>
+        <script src="scripts/hexagonal.js"></script>
+        <script src="scripts/square.js"></script>
+        <script src="scripts/sketch.js"></script>
+        <script src="scripts/directions.js"></script>
+        <script src="scripts/colors.js"></script>
+    </head>
+    <body onload="onLoadf()">
+        <div id="bg"></div>
+        <h1>Муравей Лэнгтона</h1>
+        <div id="upload-data" >
+            <input id="setup-data" type="file" onchange="onLoadData(this)">
+        </div>
+        <div id="login">
+            <div style="margin-bottom: 8px">
+                <label for="login1">Участник 1
+                    <input id="login1" required>
+                </label>
+            </div>
+            <div style="margin-bottom: 8px">
+                <label for="login2">
+                    Участник 2
+                    <input id="login2" required>
+                </label>
+            </div>
+            <div>
+                <button onclick="onLogin()">Войти</button>
+            </div>
+        </div>
+        <div id="exit"  style="visibility: hidden">
+            <button onclick="exit()">Закончить игру</button>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col">
+                <div id="CanvasHolder"></div>
+            </div>
+            <div class="w3-rest">
+                <div id="buttons">
+                    <button id="pausebutton" onclick="pause()">Запустить</button>
+                    <button id="restartbutton" onclick="restart()">Перезапустить</button>
+                    <button id="movebutton" onclick="move()">Сделать шаг</button>
+                    <p id="speed">Движений за шаг: 1</p>
+                    <button onclick="updateSpeed(-100)" id="minusbutton">-100</button>
+                    <button onclick="updateSpeed(-10)" id="minusbutton">-10</button>
+                    <button onclick="updateSpeed(-1)" id="minusbutton">-1</button>
+                    <button onclick="updateSpeed(1)" id="plusbutton">+1</button>
+                    <button onclick="updateSpeed(10)" id="plusbutton">+10</button>
+                    <button onclick="updateSpeed(100)" id="plusbutton">+100</button>
+                    <p id="counter">Счетчик шагов: 0</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
