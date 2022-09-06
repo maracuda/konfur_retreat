@@ -1,1 +1,1 @@
-export const ApiBasePrefix = "/api/web/v1/";
+export const ApiBasePrefix = "/api/";

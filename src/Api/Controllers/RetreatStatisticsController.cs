@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers;
 
 [ApiController]
-[Route("stats")]
+[Route("api/stats")]
 [GenerateContracts]
 public class RetreatStatisticsController : ControllerBase
 {

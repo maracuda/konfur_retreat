@@ -6,7 +6,7 @@ export default defineConfig({
     server: {
         proxy: {
             "/api": {
-                target: "https://localhost.testkontur.ru:9002",
+                target: "http://localhost.testkontur.ru:7009",
                 changeOrigin: false,
                 secure: false,
                 headers: {
