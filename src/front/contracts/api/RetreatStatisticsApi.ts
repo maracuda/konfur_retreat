@@ -1,12 +1,11 @@
 // tslint:disable
 // TypeScriptContractGenerator's generated content
 import { RetreatStatistics } from './../RetreatStatistics';
-import {Nullable} from "@skbkontur/react-ui/typings/utility-types";
-import {ApiBase} from "../../src/apiBase/ApiBase";
+import { ApiBase } from './../apiBase/ApiBase';
 
 export class RetreatStatisticsApi extends ApiBase implements IRetreatStatisticsApi {
     async list(): Promise<Nullable<Nullable<RetreatStatistics>[]>> {
-        return this.get(`stats/list`, {
+        return this.get(`api/stats/list`, {
             
         }, {
             
@@ -14,7 +13,7 @@ export class RetreatStatisticsApi extends ApiBase implements IRetreatStatisticsA
     }
 
     async create(statistics: Nullable<RetreatStatistics>): Promise<void> {
-        return this.put(`stats/create`, {
+        return this.put(`api/stats/create`, {
             
         }, {
             ['statistics']: statistics,
