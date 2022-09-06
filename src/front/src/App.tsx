@@ -5,9 +5,9 @@ import {Loader} from "@skbkontur/react-ui";
 import {AppErrorProvider} from "./components/AppErrorProvider/AppErrorProvider";
 import {AppRoutes} from "./AppRoutes";
 import {ErrorPage} from "./components/ErrorPage/ErrorPage";
-import {MainPage} from "./components/MainPage/MainPage";
 import {ApiBasePrefix} from "../contracts/apiBase/ApiBasePrefix";
 import {ApiBase} from "../contracts/apiBase/ApiBase";
+import MainPage from "./components/MainPage/MainPage";
 
 export const App = () => (
     <BrowserRouter>
