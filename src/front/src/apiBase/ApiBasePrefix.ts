@@ -1,0 +1,1 @@
+export const ApiBasePrefix = "/api/web/v1/";

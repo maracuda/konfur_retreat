@@ -6,6 +6,8 @@ import {AppErrorProvider} from "./components/AppErrorProvider/AppErrorProvider";
 import {AppRoutes} from "./AppRoutes";
 import {ErrorPage} from "./components/ErrorPage/ErrorPage";
 import {MainPage} from "./components/MainPage/MainPage";
+import {ApiBasePrefix} from "./apiBase/ApiBasePrefix";
+import {ApiBase} from "./apiBase/ApiBase";
 
 export const App = () => (
     <BrowserRouter>
@@ -19,3 +21,5 @@ export const App = () => (
         </AppErrorProvider>
     </BrowserRouter>
 );
+
+ApiBase.initialize(ApiBasePrefix);

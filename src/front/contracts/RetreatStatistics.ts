@@ -2,6 +2,7 @@
 // TypeScriptContractGenerator's generated content
 import { Guid } from './../domain/dataTypes/Guid';
 import { DateTime } from './../domain/dataTypes/DateTime';
+import {Nullable} from "@skbkontur/react-ui/typings/utility-types";
 
 export type RetreatStatistics = {
     id: Guid;

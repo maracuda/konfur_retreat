@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Api.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("stats")]
 [GenerateContracts]
 public class RetreatStatisticsController : ControllerBase
 {
@@ -17,14 +17,14 @@ public class RetreatStatisticsController : ControllerBase
         _retreatStatisticsRepository = retreatStatisticsRepository;
     }
 
-    [HttpGet(Name = "List")]
-    public async Task<RetreatStatistics[]> Get()
+    [HttpGet("list")]
+    public async Task<RetreatStatistics[]> List()
     {
         return await _retreatStatisticsRepository.ReadAllAsync();
     }
 
-    [HttpPut(Name = "Put")]
-    public async Task Put(RetreatStatistics statistics)
+    [HttpPut("create")]
+    public async Task Create(RetreatStatistics statistics)
     {
         await _retreatStatisticsRepository.CreateAsync(statistics);
     }

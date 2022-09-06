@@ -2,8 +2,13 @@ import React from "react";
 import {Page} from "../controls/Page/Page";
 import {Link} from "@skbkontur/react-ui";
 import {Spacer} from "../controls/Spacer/Spacer";
+import { WebApi } from "../../WebApiProvider";
 
-export const MainPage = () => {
+export const MainPage = async () => {
+
+    const stats = await WebApi.RetreatStatisticsApi.list();
+    console.log(stats);
+
     return (
         <Page header={"Заголовок главной страницы"}>
             <div>Привет! Вы находитесь во фронтовом шаблоне</div>
