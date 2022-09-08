@@ -8,6 +8,8 @@
 
     <ItemGroup>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="Vostok.Logging.Abstractions" Version="1.0.29" />
+        <PackageReference Include="Vostok.Telemetry.Kontur" Version="1.0.82" />
     </ItemGroup>
 
 </Project>

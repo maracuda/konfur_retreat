@@ -1,10 +1,23 @@
 ﻿using Metrics.Services;
+using Vostok.Logging.Abstractions;
+using Vostok.Telemetry.Kontur;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddSingleton<MetricService>();
 builder.Services.AddSingleton<IMetricCalculator, MousePosition>();
+builder.Services.AddSingleton(
+        KonturHerculesLogProvider.Get()
+            .WithProperties(new Dictionary<string, object>
+            {
+                ["elk-index"] = "alko-product-services-staging",
+                ["environment"] = "konfur",
+                ["application"] = "retreatApp"
+            })
+            .WithMinimumLevel(Vostok.Logging.Abstractions.LogLevel.Info)
+    );
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
