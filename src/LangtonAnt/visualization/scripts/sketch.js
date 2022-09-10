@@ -6,21 +6,18 @@ let data = {};
 let start = false;
 let speed = 1;
 
-const init = {
-    method: "POST",
-    mode: "no-cors"
-}
-
 async function metricStart() {
-    await fetch("http://localhost:5213/Metric/Start", init);
+    await fetch("http://localhost:5213/Metrics/Start", {
+        method: "POST",
+        mode: "no-cors"
+    });
 }
 
 async function metricStop(login1, login2) {
-    init.body = JSON.stringify({
-        login1,
-        login2
+    await fetch(`http://localhost:5213/Metrics/Stop?login1=${login1}&login2=${login2}`, {
+        method: "POST",
+        mode: "no-cors",
     });
-    await fetch("http://localhost:5213/Metric/Stop", init);
 }
 
 
@@ -54,8 +51,9 @@ async function exit() {
     const login2 = localStorage.getItem("login2");
     localStorage.removeItem("login1");
     localStorage.removeItem("login2");
-    location.reload();
     await metricStop(login1, login2);
+    debugger;
+    location.reload();
 }
 
 function TransMatrix(A) {

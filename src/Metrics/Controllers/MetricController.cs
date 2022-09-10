@@ -4,6 +4,7 @@ using Vostok.Logging.Abstractions;
 
 namespace Metrics.Controllers;
 
+
 [ApiController]
 [Route("metrics")]
 public class MetricController : ControllerBase
@@ -24,19 +25,15 @@ public class MetricController : ControllerBase
         _metricService.Start();
     }
 
+
     [HttpPost("Stop")]
-    public void Stop()
+    public void Stop([FromQuery] string login1, [FromQuery] string login2)
     {
         var result = _metricService.Stop();
         foreach (var (name, value) in result)
         {
-            Console.WriteLine(name);
-            Console.WriteLine(value);
-        }
-        
-        foreach (var (name, value) in result)
-        {
-            _log.Warn($"{name} {{value}}", value);
+            Console.WriteLine($"[{login1} + {login2}]{name} {value}");
+            _log.Warn($"[{login1} + {login2}]{name} {{value}}", value);
         }
     }
 }

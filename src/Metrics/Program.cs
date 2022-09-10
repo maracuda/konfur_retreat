@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddSingleton<MetricService>();
 builder.Services.AddSingleton<IMetricCalculator, MousePosition>();
+builder.Services.AddSingleton<IMetricCalculator, HotKeys>();
+builder.Services.AddSingleton<IMetricCalculator, Time>();
 builder.Services.AddSingleton(
         KonturHerculesLogProvider.Get()
             .WithProperties(new Dictionary<string, object>
