@@ -14,8 +14,16 @@
         <script src="scripts/colors.js"></script>
     </head>
     <body onload="onLoadf()">
+
         <div id="bg"></div>
         <h1>Муравей Лэнгтона</h1>
+        <div style="margin-bottom: 8px">
+            <a href="https://github.com/lgnv/LangtonAnt/blob/simple/visualization/readme.md"
+               target="_blank"
+            >
+                Правила игры
+            </a>
+        </div>
         <div id="upload-data" >
             <input id="setup-data" type="file" onchange="onLoadData(this)">
         </div>
@@ -32,11 +40,11 @@
                 </label>
             </div>
             <div>
-                <button onclick="onLogin()">Войти</button>
+                <button onclick="onLogin()" style="background-color: darkgreen">Войти</button>
             </div>
         </div>
-        <div id="exit"  style="visibility: hidden">
-            <button onclick="exit()">Закончить игру</button>
+        <div id="exit"  style="display: none">
+            <button id="exitButton" onclick="exit()">Закончить игру</button>
         </div>
         <div class="w3-row">
             <div class="w3-col">

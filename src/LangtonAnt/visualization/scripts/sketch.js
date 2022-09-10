@@ -26,11 +26,11 @@ async function metricStop(login1, login2) {
 
 function onLoadf() {
     if (localStorage.getItem("login1") && localStorage.getItem("login2")) {
-        document.getElementById("login").style.visibility = "hidden";
-        document.getElementById("upload-data").style.visibility = "visible";
+        document.getElementById("login").style.display = "none";
+        document.getElementById("upload-data").style.display = "block";
+        document.getElementById("exit").style.display = "block";
     }
 }
-
 
 async function onLogin() {
     const login1El = document.getElementById("login1");
@@ -42,20 +42,20 @@ async function onLogin() {
     if (login1 && login2) {
         localStorage.setItem("login1", login1);
         localStorage.setItem("login2", login2);
-        document.getElementById("login").style.visibility = "hidden";
-        document.getElementById("upload-data").style.visibility = "visible";
+        document.getElementById("login").style.display = "none";
+        document.getElementById("upload-data").style.display = "block";
+        document.getElementById("exit").style.display = "block";
         await metricStart();
     }
-    document.getElementById("exit").style.visibility = "visible";
 }
 
 async function exit() {
     const login1 = localStorage.getItem("login1");
     const login2 = localStorage.getItem("login2");
-    await metricStop(login1, login2);
     localStorage.removeItem("login1");
     localStorage.removeItem("login2");
     location.reload();
+    await metricStop(login1, login2);
 }
 
 function TransMatrix(A) {
@@ -77,7 +77,7 @@ const clone = (a) => JSON.parse(JSON.stringify(a));
 
 function initElements() {
     // document.getElementById("setup-data").style.visibility = "hidden";
-    document.getElementById("buttons").style.visibility = "visible";
+    document.getElementById("buttons").style.display = "block";
 }
 
 function onLoadData(input) {

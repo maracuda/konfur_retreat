@@ -18,7 +18,7 @@ button:hover {
 }
 
 #buttons {
-    visibility: hidden;
+    display: none;
 }
 
 #pausebutton {
@@ -54,7 +54,7 @@ a {
 
 #upload-data {
     margin: 10px;
-    visibility: hidden;
+    display: none;
 }
 
 .w3-col {
@@ -63,4 +63,8 @@ a {
 
 .w3-rest {
     min-width: 17em;
+}
+
+#exitButton {
+    background-color: darkred;
 }
